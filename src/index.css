@@ -1,35 +1,110 @@
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  font-family: 'Lato';
+  background-color:#9d9cff;
+  color:#000;
+}
+*{
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+#root{
+  width:100%;
+}
+.App{
+  width: 100%;
+}
+h1{
+  text-align: center;
+}
+h2 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+ 
+p {
+  font-size: 1rem;
+  font-weight: normal;
+}
+.posts{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width:100%;
+}
+.stickyNotes{
+  margin:1em;
+  width:30%;
+  height: 16em;
+  text-align: center;
+  color:#000;
+  background:#ffc;
+  display:block;
+  padding:1em;
+}
+
+.App, .addPost{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-h1{
-  text-align: center;
-
-}
-.anonymous{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.card{
-  border: 2px solid gray;
-  border-radius: 1em;
-  width:600px;
-  height:250px;
+.addPost{
+  color:#000;
+  background-color: 
+  #ffcf9c;
+  display:block;
+  padding:1em;
+  width:30em;
+  height: 20em;
   margin:2%;
-  padding:5% 10%;
+  padding:2% 2% 5% 2%;
+  
 }
 input{
+  background-color:	#ffcf9c;
+  border:none;
+  width:100%;
+}
+textarea::-webkit-scrollbar{
+  display: none;
+}
+textarea{
+  background-color: 
+  #ffcf9c;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.post{
+  height:300px;
+}
+.post button{
+  display:block;
+}
+h6{
+  margin: 1% 0;
+}
+
+.description{
   width:450px;
-  height: 150px;
+  height: 200px;
   border: none;
+  overflow:scroll;
+  padding:0;
 }
 button{
   display: block;
   margin-top:10px;
+  width:5em;
+  height:2em;
+  border-radius:2px;
+  border:none;
+  cursor: pointer;
 }
