@@ -30,6 +30,13 @@ function App() {
     });
 }, []);
 
+let date = new Date()
+let day = date.getDate();
+let month = date.getMonth()+1;
+let year = date.getFullYear();
+
+let fullDate = `${month}.${day}.${year}`;
+
     return (
         <div className="App">
           <h1>Anonymity</h1>
@@ -50,7 +57,7 @@ function App() {
             />
           <input 
             type= "text" 
-            placeholder="anon name **Not Required**" 
+            placeholder="Anon Name **Not Required**" 
             onChange={(event) => {
               setName(event.target.value);
             }}
@@ -63,7 +70,7 @@ function App() {
             <h2>Title</h2>
             <p>{val.postDescription}</p>
             <h3>{val.name}</h3>
-            <h6>Date</h6> 
+            <h6>{fullDate}</h6> 
             </div>
       })}
       </div>

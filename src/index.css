@@ -21,16 +21,22 @@ body {
 }
 h1{
   text-align: center;
+  font-family: 'Reenie Beanie';
+  font-size: 5rem;
+  letter-spacing: 0.05em;
 }
 h2 {
   font-weight: bold;
   font-size: 2rem;
+
 }
  
 p {
-  font-size: 1rem;
+  font-size: 2.5rem;
   font-weight: normal;
+  font-family: 'Reenie Beanie';
 }
+
 .posts{
   display: flex;
   flex-direction: row;
@@ -39,14 +45,31 @@ p {
   width:100%;
 }
 .stickyNotes{
-  margin:1em;
-  width:30%;
+  margin:2em;
+  width:28%;
   height: 16em;
   text-align: center;
   color:#000;
   background:#ffc;
   display:block;
   padding:1em;
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  transform: rotate(-6deg);
+}
+.stickyNotes:nth-child(even){
+  transform:rotate(4deg);
+  position:relative;
+  top:5px;
+}
+.stickyNotes:nth-child(3n){
+  transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+}
+.stickyNotes:nth-child(5n){
+  transform:rotate(-5deg);
+  position:relative;
+  top:-10px;
 }
 
 .App, .addPost{
@@ -55,6 +78,7 @@ p {
   justify-content: center;
   align-items: center;
 }
+
 .addPost{
   color:#000;
   background-color: 
@@ -64,20 +88,27 @@ p {
   width:30em;
   height: 20em;
   margin:2%;
-  padding:2% 2% 5% 2%;
-  
+  padding:2% 2% 5% 1.5%;
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7); 
+  transform: rotate(-1deg);
 }
+
 input{
   background-color:	#ffcf9c;
   border:none;
   width:100%;
+  height: 2em;
 }
+
 textarea::-webkit-scrollbar{
   display: none;
 }
+
 textarea{
+  font-family: 'Reenie Beanie';
   background-color: 
   #ffcf9c;
+  font-size: 2rem;
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
@@ -93,8 +124,8 @@ h6{
 }
 
 .description{
-  width:450px;
-  height: 200px;
+  width:100%;
+  height: 180px;
   border: none;
   overflow:scroll;
   padding:0;
@@ -104,7 +135,8 @@ button{
   margin-top:10px;
   width:5em;
   height:2em;
-  border-radius:2px;
+  border-radius:3px;
   border:none;
   cursor: pointer;
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
