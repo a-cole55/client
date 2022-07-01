@@ -43,7 +43,7 @@ let fullDate = `${month}.${day}.${year}`;
         <div className="addPost">
         <input 
             type= "text" 
-            placeholder="Title **Not Required**" 
+            placeholder="Title" 
             onChange={(event) => {
               setTitle(event.target.value);
             }}
