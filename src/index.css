@@ -3,7 +3,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px;
   font-family: 'Lato';
   background-color:#9d9cff;
   color:#000;
@@ -87,7 +86,7 @@ p {
   padding:1em;
   width:30em;
   height: 20em;
-  margin:2%;
+  margin:1%;
   padding:2% 2% 5% 1.5%;
   box-shadow: 5px 5px 7px rgba(33,33,33,.7); 
   transform: rotate(-1deg);
@@ -140,3 +139,39 @@ button{
   cursor: pointer;
   box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
+
+.modalBG{
+  width: 100vw;
+  height: 110vh;
+  background-color: rgba(33, 33, 33, .4);
+  position:fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.modalContainer {
+  width:660px;
+  height: 500px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.title {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+}
+.CloseIcon {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+

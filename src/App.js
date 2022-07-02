@@ -1,24 +1,11 @@
 import { useState, useEffect } from "react";
 import Axios from 'axios';
+import NewPost from "./components/Post";
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 
 function App() {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [name, setName] = useState("");
+  const [openModal, setOpenModal] = useState(false);
   const [listOfPosts, setListofPosts] = useState([]);
-
-  const addPost = () => {
-    Axios.post("http://localhost:4000/addPost", {
-      name: name, 
-      title: title,
-      description: description
-    }).then(()=> {
-      alert("Whoohoo! Success!")
-    })
-    .catch(() => {
-      console.error()
-    });
-  };
 
   useEffect(() => {
     Axios.get("http://localhost:4000/read", {
@@ -40,37 +27,25 @@ let fullDate = `${month}.${day}.${year}`;
     return (
         <div className="App">
           <h1>Anonymity</h1>
-        <div className="addPost">
-        <input 
-            type= "text" 
-            placeholder="Title" 
-            onChange={(event) => {
-              setTitle(event.target.value);
-            }}
-            />
-          <textarea className="description"
-            type= "text" 
-            placeholder="Write your text here" 
-            onChange={(event) => {
-              setDescription(event.target.value);
-            }}
-            />
-          <input 
-            type= "text" 
-            placeholder="Anon Name **Not Required**" 
-            onChange={(event) => {
-              setName(event.target.value);
-            }}
-            />
-          <button type="submit" onClick={addPost}>Submit</button>
-      </div>
+          <div>
+            <button 
+            className="openModalBtn"
+            onClick={() => {
+              setOpenModal(true);
+            }}>
+              Create Post</button>
+          </div>
+        {openModal && <NewPost closeModal={setOpenModal}/>}
       <div className="posts">
         {listOfPosts.map((val) => {
           return <div className="stickyNotes">  
             <h2>Title</h2>
             <p>{val.postDescription}</p>
-            <h3>{val.name}</h3>
+            <h3>-{val.name}</h3>
+            <div>
             <h6>{fullDate}</h6> 
+            <ThumbUpIcon color="default" fontSize="small"/>
+            </div>
             </div>
       })}
       </div>
