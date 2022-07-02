@@ -55,6 +55,21 @@ p {
   box-shadow: 5px 5px 7px rgba(33,33,33,.7);
   transform: rotate(-6deg);
 }
+
+.stickyNoteFooter {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 2em;
+  width: 80%;
+  position:fixed;
+  bottom: 1em;
+}
+
+.stickyNoteFooter h6{
+  display: inline-block;
+}
+
 .stickyNotes:nth-child(even){
   transform:rotate(4deg);
   position:relative;
@@ -139,6 +154,13 @@ button{
   cursor: pointer;
   box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
+.openModalBtn{
+  width:7em;
+  height:2.25em;
+  background-color: 	#ffcf9c;
+  font-weight: bold;
+  font: 1.5rem 'Lato';
+}
 
 .modalBG{
   width: 100vw;
@@ -152,18 +174,24 @@ button{
 }
 
 .modalContainer {
-  width:660px;
-  height: 500px;
+  width:800px;
+  height: 600px;
   border-radius: 12px;
-  background-color: white;
+  background-color: #ffc;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 25px;
 }
+.header{
+  margin: 0 0 4em 0;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: flex-end;
 
+}
 .title {
   display: inline-block;
   text-align: center;

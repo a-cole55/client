@@ -42,7 +42,7 @@ let fullDate = `${month}.${day}.${year}`;
             <h2>Title</h2>
             <p>{val.postDescription}</p>
             <h3>-{val.name}</h3>
-            <div>
+            <div className="stickyNoteFooter">
             <h6>{fullDate}</h6> 
             <ThumbUpIcon color="default" fontSize="small"/>
             </div>

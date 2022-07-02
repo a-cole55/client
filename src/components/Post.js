@@ -20,14 +20,21 @@ export default function NewPost({ closeModal }){
         console.error()
       });
     };
+    
+    const clearInput = () => {
+        // empty inputs
+        setTitle("");
+        setName("");
+        setDescription("")
+    };
 
 
     return(
         <div className="modalBG">
         <div className="modalContainer">
             <div className="header">
-            <h2 className="title">Create Post</h2>
-            <CloseIcon  className="CloseIcon" onClick={() => closeModal(false)}/>
+                {/* <h2 className="title">Create Post</h2> */}
+                <CloseIcon  className="CloseIcon" onClick={() => closeModal(false)}/>
             </div>
         <div className="addPost">
         <input 
@@ -51,9 +58,9 @@ export default function NewPost({ closeModal }){
               setName(event.target.value);
             }}
             />
-          <button type="submit" onClick={addPost}>Submit</button>
-          {/* <button type="cancel" onClick={clearScreen}>Clear</button> */}
       </div>
+      <button type="submit" onClick={addPost}>Submit</button>
+      <button type="button" onClick={clearInput}>Clear</button>
       </div>
       </div>
     )
