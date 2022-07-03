@@ -17,13 +17,6 @@ function App() {
     });
 }, []);
 
-let date = new Date()
-let day = date.getDate();
-let month = date.getMonth()+1;
-let year = date.getFullYear();
-
-let fullDate = `${month}.${day}.${year}`;
-
     return (
         <div className="App">
           <h1>Anonymity</h1>
@@ -39,11 +32,11 @@ let fullDate = `${month}.${day}.${year}`;
       <div className="posts">
         {listOfPosts.map((val) => {
           return <div className="stickyNotes">  
-            <h2>Title</h2>
+            {/* <h2>{val.title}</h2> */}
             <p>{val.postDescription}</p>
             <h3>-{val.name}</h3>
             <div className="stickyNoteFooter">
-            <h6>{fullDate}</h6> 
+            {/* <h6>{val.fullDate}</h6>  */}
             <ThumbUpIcon color="default" fontSize="small"/>
             </div>
             </div>
